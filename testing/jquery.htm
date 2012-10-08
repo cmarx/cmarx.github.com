@@ -7,10 +7,47 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- And there it went! -->
 
+	<!-- Test of vanilla jQuery code.  Some of this may be able to be removed or condensed. -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+    <!-- Removed this... <link rel="stylesheet" href="/resources/demos/style.css" /> ...no worthwhile styles in there. -->
+    <script>
+    $(function() {
+        $( "#accordion" ).accordion();
+    });
+
+	<!-- End of jQuery vanilla code. -->
+	<!-- Begin jQuery forum work, found I need this for a second accordion -->
+
+	$(function() {
+        $( "#accordion2" ).accordion({ active: false, collapsible: true });
+    });
+    </script>
+    <!-- end troubleshooting -->
 </head>
 
 
 <body style="padding-top:80px">
+
+<div class="container-fluid">
+	<div class="row-fluid">
+    	<div class="span2">
+
+         	   <ul class="nav nav-list">
+                    <li class="nav-header">Sub-Nav</li>       
+                    <li><a href="overview.htm">Overview</a></li>
+                    <li><a href="bootstrap.htm">Basic Bootstrap</a></li>
+                    <li><a href="tb-advanced.htm">Adv Bootstrap</a></li>
+                    <li class="active"><a href="jquery.htm">jQuery</a></li>
+               </ul>
+
+		</div>
+			<div class="span10">
+        	<!-- main content here -->
+	
+
+
 
 <div class="container" style="width:80%">
 
@@ -40,7 +77,81 @@
         </p>
     
     <a id="visualized"></a>
-    <h3> Sub-Goals1: </h3>
+    <h3> Sub-Goal 1: Accordion with jQuery</h3>
+
+<!-- Beginning of 2 column grid -->
+    <div class="row">
+    <div class="span5">
+     
+<!-- Begin jQuery vanilla code -->
+	<div id="accordion" style="font-size: 62.5%;">
+    <h3>Section 1</h3>
+    <div>
+        <p>
+        Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+        ut neque. 
+        </p>
+    </div>
+    <h3>Section 2</h3>
+    <div>
+        <p>
+        Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+        purus. 
+        </p>
+    </div>
+    <h3>Section 3</h3>
+    <div>
+        <p>
+        Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+        Phasellus pellentesque purus in massa. Aenean in pede. 
+        </p>
+        <ul>
+            <li>List item one</li>
+            <li>List item two</li>
+            <li>List item three</li>
+        </ul>
+    </div>
+</div>
+
+<!-- End 1st jQuery vanilla code useage -->
+</div>
+<!-- call the second column -->
+    <div class="span5">
+
+<!-- Could it be: a second one cannot co-exist? Unlikely!  Probably user error! -->
+<div id="accordion2" style="font-size: 62.5%;">
+    <h3>Section 1</h3>
+    <div>
+        <p>
+        Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+        ut neque. 
+        </p>
+    </div>
+    <h3>Section 2</h3>
+    <div>
+        <p>
+        Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+        purus. 
+        </p>
+    </div>
+    <h3>Section 3</h3>
+    <div>
+        <p>
+        Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+        Phasellus pellentesque purus in massa. Aenean in pede. 
+        </p>
+        <ul>
+            <li>List item one</li>
+            <li>List item two</li>
+            <li>List item three</li>
+        </ul>
+    </div>
+</div>
+<!-- End 2nd jQuery vanilla code useage -->
+
+</div>
+</div>
+<!-- close of second column grid -->    
 
     <a id="status"></a>
     <h3>Sub-Goal2:</h3>
@@ -69,14 +180,20 @@
 					<li><a href="tb-advanced.htm">Adv Bootstrap</a></li>
                     <li class="active"><a href="jquery.htm">jQuery</a></li>
                 </ul>
+			</li>
             <li class="disabled"><a href="#">Links</a></li>
         </ul>
     </div>
 </div>
 
 
-<!-- This jQuery is here because TB asked for it.  Claimed we all use it this way.  I guess they assume even basic pages use JQ now-a-days. -->
+	</div>
+	</div>
+</div>
+
+<!-- The TB jQuery broke the full jQuery UI. Simply commenting it out allowed both the accordion AND the TB nav to coexist.  See head section for the 2 jQ UI calls.
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+-->
 
 <!-- Here comes Twitter Bootstrap -->
 <script src="js/bootstrap.min.js"></script>
