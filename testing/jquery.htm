@@ -53,23 +53,24 @@
 
     <h1>jQuery Usage </h1>
     
-    <h2>Purpose</h2>
+    <h2>Main Goal</h2>
         <p class="lead">This page is intended to test the initial implementation of jQuery and jQuery UI.</p>
-        <p><em>Please always remember that whatever is published to GitHub is public.</em></p>
-    
+        <div class="alert alert-error">
+                <button type="button" class="close" data-dismiss="alert">x</button><strong>Remember: </strong>Please always remember that whatever is published to GitHub is public.
+		</div>
+            
     <h2>Sub-Goals</h2>
         <ul class="nav nav-pills">
             <li><a href="#overview" style="btn">Sub-Goal Overview</a></li>
-            <li><a href="#visualized" style="btn">Sub-Goal1</a></li>
-            <li><a href="#status" style="btn">Sub-Goal2</a></li>
-            <li><a href="#testing" style="btn">Testing</a></li>
+            <li><a href="#visualized" style="btn">Sub-Goal 1</a></li>
+            <li><a href="#status" style="btn">Sub-Goal 2</a></li>
         </ul>
     
     <a id="overview"></a>
     <h3>Sub-Goals Overview:</h3>
         <p>As this is a test, there are certain goals to achieve.  
             <ul>
-                <li>Sub-Goal1</li>
+                <li>Sub-Goal 1: Accordion with jQuery</li>
                 <li>Sub-Goal2</li>
                 <li>Sub-Goal3</li>
             </ul>
@@ -78,9 +79,12 @@
     
     <a id="visualized"></a>
     <h3> Sub-Goal 1: Accordion with jQuery</h3>
+    <p class="text-success"><strong>Result:</strong> This worked with minimal customization. 2 bits of renaming the JS and some CSS styling were all that was needed.</p>
+    <p>Getting the jQuery UI component in here instead of the Bootstrap ones was simple. </p>
+    
 
 <!-- Beginning of 2 column grid -->
-    <div class="row">
+    <div class="row" style="padding-bottom:30px">
     <div class="span5">
      
 <!-- Begin jQuery vanilla code -->
@@ -153,17 +157,18 @@
 </div>
 <!-- close of second column grid -->    
 
-    <a id="status"></a>
-    <h3>Sub-Goal2:</h3>
-
-    <a id="testing"></a>
-    <h2>Testing Advanced Functions</h2>
-        <p>In order to reach the goals, other test pages will be built.  Really, they should be this same page, but with the connection to Twitter Bootstrap or jQuery built in.  So the pages with the frameworks built in will be linked to here.</p>
-    <h3>Bootstrap</h3>
-	    <p>See <a href="tb-advanced.htm">here</a> for more information.</p>
+<p>There was an issue where you had to name each accordion individually in order to get the JQ to work, but that was a simple fix.  Styling is rather flexible too.  It currently uses the TB grid to align side-by-side, but that can be done with a couple lines of CSS too if TB is not used.</p>
+    <p>See the comments for the blocks of code and the issues found along the way.  Very simple though</p>
     
-    <h3>jQuery UI</h3>
-	    <p>You are looking at it</p>
+    
+    <a id="status"></a>
+    <h3>Sub-Goal 2:</h3>
+	<p> Coming soon.</p>
+    
+	<h3>Sub-Goal 3:</h3>
+	<p> Coming soon.</p>
+    
+    
 </div>
 
 <!-- the nifty TB nav goes here -->
